@@ -1,8 +1,6 @@
-// CISP 401 Fall 2017 Brinder Dhaliwal SID # 1106290
-//Assignment 5 Description......
-// .........................................
 // Write a JFrame app that plays "guess the number". Application chooses number at random between 1-1000.
 //GuessGameFrame.java
+
 
 import java.awt.FlowLayout;             //necessary classes imported from Java Api for dealing with JFrame Components
 import java.awt.event.ActionListener;   
