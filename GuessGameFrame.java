@@ -14,7 +14,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseListener;   //for mouse licks
 import java.awt.event.MouseEvent;       
 import java.util.Random;                //for generating random number
-import java.util.ArrayList;             //for arraylist for guess tracker
+       
 
 public class GuessGameFrame extends JFrame  //extends JFrame, all variables and methods defined
 {
@@ -26,7 +26,6 @@ public class GuessGameFrame extends JFrame  //extends JFrame, all variables and 
     private String string;
     private int guess;                      //used when converting string to integer
     private int trialCount;                 //keeps track of number of trials
-    private ArrayList<Integer> guessTracker = new ArrayList<Integer>();     //used for guessed number count
     private int guessCount;                 //used as second guesscounter
     private int n;                          //new random number is stored in n
 
@@ -130,13 +129,6 @@ public class GuessGameFrame extends JFrame  //extends JFrame, all variables and 
     
     public GuessGameFrame react()           //react to new guess being entered 
     {      
-
-        for (int i=0;i<guessTracker.size();i++)
-        {
-            prompt1JLabel.setText("Guessed Number(s): ");       //at this stage, number guessed should be displayed at top of window
-            prompt1JLabel.setText(prompt1JLabel.getText() + guessTracker.get(i));   //use array list to get each guess 
-
-        }
             trialCount++;                   //increment trial count
             prompt2JLabel.setText("Can you guess my number? Enter guess number " + trialCount +": ");   
             paint (n);                              //call paint to change background depending on high/low
